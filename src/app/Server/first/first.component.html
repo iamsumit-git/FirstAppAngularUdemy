@@ -1,0 +1,32 @@
+<p>first works!</p>
+
+<label>Server Name</label>
+<!-- <input type="text"
+class ="form-control"
+(input)="onUpdateServerName($event)"> // event binding 
+<p>{{serverName}}</p> -->
+
+<input type="text"
+class ="form-control"
+[(ngModel)]="serverName"
+>
+<!-- <p>{{serverName}}</p> -->
+
+
+<!-- <br>
+<p>{{"server"}} with id {{serverId}}  is {{getServerId()}}</p> -->
+
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+<p>{{serverCreationStatus}}</p>
+
+<!-- <p>{{ allowNewServer}}</p>  // string interpolarion
+<p [innerText]="allowNewServer"></p> // property binding -->
+<!-- Note for 7 and 8 line is his working exactly same -->
+
+<label>user Name</label>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<p>{{userName}}</p>
+<button class="btn btn-primary" [disabled]="userName === ''"
+(click)="userName=''"
+>Reset</button>
+
